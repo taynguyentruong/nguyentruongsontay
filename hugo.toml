@@ -15,7 +15,7 @@ defaultContentLanguage = 'vi'
   [params.profile]
     show = true
     name = "Nguyễn Trường Sơn Tây"
-    image = "img/avatar.jpg"
+    image = "img/avatar.png"
     headline = "Sinh viên Lập trình Mạng"
     bio = "Chào mừng bạn đến với blog của tôi. Tôi đam mê Java, JavaScript và Network Programming."
     links = [
@@ -46,3 +46,8 @@ defaultContentLanguage = 'vi'
     name = "Về tôi"
     url = "/about/"
     weight = 20
+  [[menu.main]]
+    identifier = "contact"
+    name = "Liên hệ"
+    url = "/contact/"
+    weight = 30
