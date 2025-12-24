@@ -14,7 +14,12 @@ pagerSize = 6
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
   term = ["HTML", "RSS"]
-  footer = [] # Exclude footer section from generating pages
+  footer = []
+
+[params.plugins]
+[[params.plugins.css]]
+URL = "css/custom.css"
+
 
 [params]
 title = 'Nguyễn Trường Sơn Tây'

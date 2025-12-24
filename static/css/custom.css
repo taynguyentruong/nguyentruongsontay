@@ -1,0 +1,88 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+    --primary: #4e54c8;
+    --secondary: #8f94fb;
+    --dark-bg: #141414;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --text-color: #e0e0e0;
+    --heading-color: #ffffff;
+    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Outfit', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 700;
+}
+
+code, pre {
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Hero Section Gradient - Force Dark Mode Style always or override */
+.rad-showcase {
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    color: white;
+    padding: 100px 0;
+    margin-bottom: 0 !important;
+}
+
+/* Glassmorphism Cards */
+.card, .job-card, .project-card, .experience-card {
+    background: var(--card-bg) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: var(--glass-border) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .job-card:hover, .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(78, 84, 200, 0.2);
+    border-color: var(--primary) !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%) !important;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 12px 30px !important;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(78, 84, 200, 0.4);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 6px 20px rgba(78, 84, 200, 0.6);
+    transform: scale(1.05);
+}
+
+/* Skills Badges */
+.badge {
+    background: rgba(255,255,255,0.1) !important;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+/* Images */
+.profile-image img {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% !important;
+    box-shadow: 0 0 20px rgba(78,84,200,0.5);
+    animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+    0% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
+    50% { border-radius: 30% 60% 70% 40%/50% 60% 30% 60%; }
+    100% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
+}
