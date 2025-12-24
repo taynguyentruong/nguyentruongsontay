@@ -1,140 +1,48 @@
 baseURL = 'https://taynguyentruong.github.io/nguyentruongsontay/'
 title = 'Nguyễn Trường Sơn Tây'
 languageCode = 'vi'
-theme = 'adritian-free-hugo-theme'
-timeout = "3000ms"
+theme = 'congo'
 defaultContentLanguage = 'vi'
 
-[pagination]
-pagerSize = 6
-
-[outputs]
-  page = ["HTML"]
-  home = ["HTML", "RSS", "JSON"]
-  section = ["HTML", "RSS"]
-  taxonomy = ["HTML", "RSS"]
-  term = ["HTML", "RSS"]
-  footer = []
-
-[params.plugins]
-[[params.plugins.css]]
-URL = "css/custom.css"
-
-
+[metadata]
+  # Enables minimal mode
+  # minimal = true
+  
 [params]
-title = 'Nguyễn Trường Sơn Tây'
-description = 'Sinh viên Lập trình Mạng - Blog cá nhân chia sẻ về Java, JavaScript và Network Programming.'
-images = ['/img/og-img.png'] 
-sections = [
-  "showcase",
-  "about",
-  "skills",
-  "experience",
-  "client-and-work",
-  "blog",
-  "contact"
-]
-homepageExperienceCount = 3
+  colorScheme = "congo" # options: "congo", "avocado", "ocean", "slate", ...
+  defaultTheme = "light"
+  
+  [params.profile]
+    show = true
+    name = "Nguyễn Trường Sơn Tây"
+    image = "img/avatar.jpg"
+    headline = "Sinh viên Lập trình Mạng"
+    bio = "Chào mừng bạn đến với blog của tôi. Tôi đam mê Java, JavaScript và Network Programming."
+    links = [
+      { icon = "github", url = "https://github.com/taynguyentruong" },
+      { icon = "linkedin", url = "#" },
+      { icon = "email", url = "mailto:email@example.com" }
+    ]
 
-[params.experience]
-showJobCard = true
-
-[params.analytics]
-vercelPageInsights = false
-vercelAnalytics = false
+  [params.footer]
+    showCopyright = true
+    showTheme = false
+    showPoweredBy = false
 
 [languages]
-[languages.vi]
-disabled = false
-languageCode = 'vi'
-languageDirection = 'ltr'
-languageName = 'Tiếng Việt'
-title = 'Nguyễn Trường Sơn Tây'
-weight = 0
+  [languages.vi]
+    languageName = "Tiếng Việt"
+    contentDir = "content"
+    weight = 1
 
-[languages.vi.menus]
-[[languages.vi.menus.header]]
-name = "Trang chủ"
-URL = "/"
-weight = 1
-[[languages.vi.menus.header]]
-name = 'Giới thiệu'
-URL = '#about'
-weight = 2
-[[languages.vi.menus.header]]
-name = 'Kỹ năng'
-URL = '#skills'
-weight = 3
-[[languages.vi.menus.header]]
-name = 'Kinh nghiệm'
-URL = '#experience'
-weight = 4
-[[languages.vi.menus.header]]
-name = 'Dự án'
-URL = '#client-and-work-section'
-weight = 5
-[[languages.vi.menus.header]]
-name = "Blog"
-URL = "/blog"
-weight = 6
-[[languages.vi.menus.header]]
-pre = "email"
-name = "Liên hệ"
-URL = "#contact"
-weight = 7
-
-[[languages.vi.menus.footer]]
-name = "Trang chủ"
-URL = "/"
-weight = 1
-[[languages.vi.menus.footer]]
-name = "Blog"
-URL = "/blog"
-weight = 2
-
-# Mounts require explicit definition if used alongside module imports, but we just use theme var.
-# However, to ensure bootstrap scss is found from root node_modules, we redefine mounts.
-# Standard mounts must be included when overriding.
-[[module.mounts]]
-source = "archetypes"
-target = "archetypes"
-[[module.mounts]]
-source = "assets"
-target = "assets"
-[[module.mounts]]
-source = "content"
-target = "content"
-[[module.mounts]]
-source = "i18n"
-target = "i18n"
-[[module.mounts]]
-source = "layouts"
-target = "layouts"
-[[module.mounts]]
-source = "static"
-target = "static"
-[[module.mounts]]
-source = "node_modules/bootstrap/scss"
-target = "assets/scss/bootstrap"
-[[module.mounts]]
-source = "node_modules/bootstrap/dist/js"
-target = "assets/js/bootstrap"
-[[module.mounts]]
-source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-target = "assets/js/vendor/bootstrap.bundle.min.js"
-[[module.mounts]]
-source = "node_modules/bootstrap-print-css/css/bootstrap-print.css"
-target = "assets/css/bootstrap-print.css"
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-  [markup.highlight]
-    lineNos = false
-    style = "github"
-
-[imaging]
-  resampleFilter = "Lanczos"
-  quality = 85
-  anchor = "Smart"
+[menu]
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "about"
+    name = "Về tôi"
+    url = "/about/"
+    weight = 20
