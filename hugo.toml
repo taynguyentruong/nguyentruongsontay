@@ -2,6 +2,8 @@ baseURL = 'https://taynguyentruong.github.io/nguyentruongsontay/'
 title = 'Nguyễn Trường Sơn Tây'
 languageCode = 'vi'
 theme = 'adritian-free-hugo-theme'
+timeout = "3000ms"
+defaultContentLanguage = 'vi'
 
 [pagination]
 pagerSize = 6
@@ -12,19 +14,25 @@ pagerSize = 6
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
   term = ["HTML", "RSS"]
+  footer = [] # Exclude footer section from generating pages
 
 [params]
 title = 'Nguyễn Trường Sơn Tây'
 description = 'Sinh viên Lập trình Mạng - Blog cá nhân chia sẻ về Java, JavaScript và Network Programming.'
-images = ['/img/og-img.png'] # You should replace this with a real image later
+images = ['/img/og-img.png'] 
 sections = [
+  "showcase",
   "about",
+  "skills",
   "experience",
-  "showcase", # This is usually "Projects" or "Portfolio"
+  "client-and-work",
   "blog",
   "contact"
 ]
 homepageExperienceCount = 3
+
+[params.experience]
+showJobCard = true
 
 [params.analytics]
 vercelPageInsights = false
@@ -49,22 +57,26 @@ name = 'Giới thiệu'
 URL = '#about'
 weight = 2
 [[languages.vi.menus.header]]
-name = 'Kinh nghiệm'
-URL = '#experience'
+name = 'Kỹ năng'
+URL = '#skills'
 weight = 3
 [[languages.vi.menus.header]]
-name = 'Dự án'
-URL = '#showcase'
+name = 'Kinh nghiệm'
+URL = '#experience'
 weight = 4
+[[languages.vi.menus.header]]
+name = 'Dự án'
+URL = '#client-and-work-section'
+weight = 5
 [[languages.vi.menus.header]]
 name = "Blog"
 URL = "/blog"
-weight = 5
+weight = 6
 [[languages.vi.menus.header]]
 pre = "email"
 name = "Liên hệ"
 URL = "#contact"
-weight = 6
+weight = 7
 
 [[languages.vi.menus.footer]]
 name = "Trang chủ"
@@ -75,8 +87,39 @@ name = "Blog"
 URL = "/blog"
 weight = 2
 
-[params.experience]
-showJobCard = true
+# Mounts require explicit definition if used alongside module imports, but we just use theme var.
+# However, to ensure bootstrap scss is found from root node_modules, we redefine mounts.
+# Standard mounts must be included when overriding.
+[[module.mounts]]
+source = "archetypes"
+target = "archetypes"
+[[module.mounts]]
+source = "assets"
+target = "assets"
+[[module.mounts]]
+source = "content"
+target = "content"
+[[module.mounts]]
+source = "i18n"
+target = "i18n"
+[[module.mounts]]
+source = "layouts"
+target = "layouts"
+[[module.mounts]]
+source = "static"
+target = "static"
+[[module.mounts]]
+source = "node_modules/bootstrap/scss"
+target = "assets/scss/bootstrap"
+[[module.mounts]]
+source = "node_modules/bootstrap/dist/js"
+target = "assets/js/bootstrap"
+[[module.mounts]]
+source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+target = "assets/js/vendor/bootstrap.bundle.min.js"
+[[module.mounts]]
+source = "node_modules/bootstrap-print-css/css/bootstrap-print.css"
+target = "assets/css/bootstrap-print.css"
 
 [markup]
   [markup.goldmark]
