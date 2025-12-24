@@ -15,7 +15,7 @@ defaultContentLanguage = 'vi'
   [params.profile]
     show = true
     name = "Nguyễn Trường Sơn Tây"
-    image = "nguyentruongsontay/img/avatar.png"
+    image = "img/avatar.png"
     headline = "Sinh viên Lập trình Mạng"
     bio = "Chào mừng bạn đến với blog của tôi. Tôi đam mê Java, JavaScript và Network Programming."
     links = [
