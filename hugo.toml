@@ -1,43 +1,92 @@
 baseURL = 'https://taynguyentruong.github.io/nguyentruongsontay/'
+title = 'Nguyễn Trường Sơn Tây'
 languageCode = 'vi'
-title = 'Nguyễn Trường Sơn Tây - Blog'
-theme = 'PaperMod'
+theme = 'adritian-free-hugo-theme'
+
+[pagination]
+pagerSize = 6
+
+[outputs]
+  page = ["HTML"]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
 
 [params]
-  defaultTheme = "light"
-  env = "production"
-  description = "Blog chia sẻ về Lập trình mạng, Java và JavaScript"
-  author = "Nguyễn Trường Sơn Tây"
-  # ShowReadingTime = true
-  # ShowShareButtons = true
-  
-  [params.profileMode]
-    enabled = false
-    title = "Nguyễn Trường Sơn Tây"
-    subtitle = "Sinh viên Lập trình Mạng"
-    # imageUrl = "<link to your image>"
-    
-  [params.homeInfoParams]
-    Title = "Xin chào 👋"
-    Content = "Chào mừng bạn đến với blog cá nhân của tôi. Nơi chia sẻ kiến thức về lập trình Java, JavaScript và Lập trình mạng."
+title = 'Nguyễn Trường Sơn Tây'
+description = 'Sinh viên Lập trình Mạng - Blog cá nhân chia sẻ về Java, JavaScript và Network Programming.'
+images = ['/img/og-img.png'] # You should replace this with a real image later
+sections = [
+  "about",
+  "experience",
+  "showcase", # This is usually "Projects" or "Portfolio"
+  "blog",
+  "contact"
+]
+homepageExperienceCount = 3
 
-  [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/taynguyentruong"
+[params.analytics]
+vercelPageInsights = false
+vercelAnalytics = false
 
-[menu]
-  [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 10
-  [[menu.main]]
-    identifier = "blog"
-    name = "Blog"
-    url = "/posts"
-    weight = 20
-  [[menu.main]]
-    identifier = "about"
-    name = "Profile"
-    url = "/about"
-    weight = 30
+[languages]
+[languages.vi]
+disabled = false
+languageCode = 'vi'
+languageDirection = 'ltr'
+languageName = 'Tiếng Việt'
+title = 'Nguyễn Trường Sơn Tây'
+weight = 0
+
+[languages.vi.menus]
+[[languages.vi.menus.header]]
+name = "Trang chủ"
+URL = "/"
+weight = 1
+[[languages.vi.menus.header]]
+name = 'Giới thiệu'
+URL = '#about'
+weight = 2
+[[languages.vi.menus.header]]
+name = 'Kinh nghiệm'
+URL = '#experience'
+weight = 3
+[[languages.vi.menus.header]]
+name = 'Dự án'
+URL = '#showcase'
+weight = 4
+[[languages.vi.menus.header]]
+name = "Blog"
+URL = "/blog"
+weight = 5
+[[languages.vi.menus.header]]
+pre = "email"
+name = "Liên hệ"
+URL = "#contact"
+weight = 6
+
+[[languages.vi.menus.footer]]
+name = "Trang chủ"
+URL = "/"
+weight = 1
+[[languages.vi.menus.footer]]
+name = "Blog"
+URL = "/blog"
+weight = 2
+
+[params.experience]
+showJobCard = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    lineNos = false
+    style = "github"
+
+[imaging]
+  resampleFilter = "Lanczos"
+  quality = 85
+  anchor = "Smart"

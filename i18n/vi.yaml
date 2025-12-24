@@ -1,0 +1,113 @@
+## Meta tags
+- id: "meta_title"
+  translation: "Nguyễn Trường Sơn Tây - Blog & Portfolio"
+- id: "meta_description"
+  translation: "Blog cá nhân chia sẻ về Java, JavaScript và Lập trình mạng."
+- id: "meta_keywords"
+  translation: "java, javascript, network programming, blog, portfolio"
+- id: "meta_author"
+  translation: "Nguyễn Trường Sơn Tây"
+- id: "meta_image"
+  translation: "/img/general/og-image.jpg"
+
+## Header
+- id: "logo_alt"
+  translation: "Logo"
+- id: "logo_text1"
+  translation: "NT"
+- id: "logo_text2"
+  translation: "ST"
+
+## General
+- id: "skipToMainContent"
+  translation: "Đến nội dung chính"
+- id: "toggle_navigation"
+  translation: "Bật tắt menu"
+
+## Footer
+- id: "footer_notice"
+  translation: "© 2024 Nguyễn Trường Sơn Tây."
+- id: "language"
+  translation: "Ngôn ngữ"
+- id: "toggle_theme"
+  translation: "Đổi giao diện"
+- id: "theme_light"
+  translation: "☀️ Sáng"
+- id: "theme_dark"
+  translation: "🌑 Tối"
+- id: "theme_auto"
+  translation: "✨ Tự động"
+
+## Homepage showcase
+- id: "showcase_title"
+  translation: "Xin chào, tôi là Nguyễn Trường Sơn Tây"
+- id: "showcase_subtitle"
+  translation: "Sinh viên đam mê Lập trình Mạng"
+- id: "showcase_description"
+  translation: "Chào mừng bạn đến với blog cá nhân của tôi. Nơi tôi chia sẻ kiến thức về <b>Java</b>, <b>JavaScript</b> và các kỹ thuật <b>Lập trình mạng</b>. <br><br> Hãy cùng khám phá các bài viết và dự án của tôi nhé!"
+- id: "showcase_button"
+  translation: "Liên hệ tôi"
+- id: "showcase_image_alt"
+  translation: "Ảnh đại diện"
+
+## Homepage about
+- id: "about_title"
+  translation: "Về tôi"
+- id: "about_content"
+  translation: '<p class="lead">Tôi là sinh viên chuyên ngành Lập trình mạng. Tôi thích tìm hiểu sâu về cách internet vận hành và xây dựng các ứng dụng web hiệu năng cao.</p>'
+- id: "about_button"
+  translation: "Xem chi tiết"
+
+## Homepage education
+- id: "education_title"
+  translation: "Học vấn"
+
+## Homepage experience
+- id: "experience_button"
+  translation: "LinkedIn"
+- id: "experience_button_url"
+  translation: "#"
+- id: "experience_button2"
+  translation: "Tải CV"
+- id: "experience_button2_url"
+  translation: "#"
+- id: "experience_button3"
+  translation: "Xem chi tiết"
+- id: "experience_button3_url"
+  translation: "#experience"
+
+## Homepage client & work
+- id: "client_work_title"
+  translation: "Dự án tiêu biểu"
+
+## Homepage contact
+- id: "contact_title"
+  translation: "Liên hệ"
+- id: "contact_button"
+  translation: "Gửi tin nhắn"
+- id: "contact_form_name"
+  translation: "Họ và tên"
+- id: "contact_form_email"
+  translation: "Email"
+- id: "contact_form_message"
+  translation: "Nội dung tin nhắn"
+- id: "contact_phone_title"
+  translation: "Điện thoại"
+- id: "contact_phone_number"
+  translation: "0123 456 789"
+- id: "contact_email_title"
+  translation: "Email"
+- id: "contact_email_email"
+  translation: "email@example.com"
+- id: "contact_address_title"
+  translation: "Địa chỉ"
+- id: "contact_address_address"
+  translation: "TP. Hồ Chí Minh, Việt Nam"
+
+## Blog
+- id: "read_more"
+  translation: "Đọc tiếp"
+- id: "published_on"
+  translation: "Đăng ngày "
+- id: "recent_posts"
+  translation: "Bài viết mới"
