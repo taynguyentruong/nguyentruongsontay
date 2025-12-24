@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Collections on Nguyễn Trường Sơn Tây - Blog</title>
+    <link>https://nguyentruongsontay.github.io/tags/collections/</link>
+    <description>Recent content in Collections on Nguyễn Trường Sơn Tây - Blog</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi</language>
+    <lastBuildDate>Sun, 22 Dec 2024 08:00:00 +0700</lastBuildDate>
+    <atom:link href="https://nguyentruongsontay.github.io/tags/collections/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bài 3: Sử dụng Java Collections Framework</title>
+      <link>https://nguyentruongsontay.github.io/posts/java-03-collections/</link>
+      <pubDate>Sun, 22 Dec 2024 08:00:00 +0700</pubDate>
+      <guid>https://nguyentruongsontay.github.io/posts/java-03-collections/</guid>
+      <description>Hướng dẫn sử dụng List, Set, Map trong Java.</description>
+    </item>
+  </channel>
+</rss>

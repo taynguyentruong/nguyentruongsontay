@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Async on Nguyễn Trường Sơn Tây - Blog</title>
+    <link>https://nguyentruongsontay.github.io/tags/async/</link>
+    <description>Recent content in Async on Nguyễn Trường Sơn Tây - Blog</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi</language>
+    <lastBuildDate>Mon, 23 Dec 2024 16:00:00 +0700</lastBuildDate>
+    <atom:link href="https://nguyentruongsontay.github.io/tags/async/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bài 9: Bất đồng bộ trong JavaScript (Async/Await)</title>
+      <link>https://nguyentruongsontay.github.io/posts/js-04-async/</link>
+      <pubDate>Mon, 23 Dec 2024 16:00:00 +0700</pubDate>
+      <guid>https://nguyentruongsontay.github.io/posts/js-04-async/</guid>
+      <description>Xử lý bất đồng bộ hiện đại với Promise và Async/Await.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nguyễn Trường Sơn Tây - Blog</title>
+    <link>https://nguyentruongsontay.github.io/</link>
+    <description>Recent content on Nguyễn Trường Sơn Tây - Blog</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi</language>
+    <lastBuildDate>Tue, 24 Dec 2024 12:00:00 +0700</lastBuildDate>
+    <atom:link href="https://nguyentruongsontay.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Về tôi</title>
+      <link>https://nguyentruongsontay.github.io/about/</link>
+      <pubDate>Tue, 24 Dec 2024 12:00:00 +0700</pubDate>
+      <guid>https://nguyentruongsontay.github.io/about/</guid>
+      <description>Giới thiệu về Nguyễn Trường Sơn Tây</description>
+    </item>
+    <item>
+      <title>Bài 9: Bất đồng bộ trong JavaScript (Async/Await)</title>
+      <link>https://nguyentruongsontay.github.io/posts/js-04-async/</link>
+      <pubDate>Mon, 23 Dec 2024 16:00:00 +0700</pubDate>
+      <guid>https://nguyentruongsontay.github.io/posts/js-04-async/</guid>
+      <description>Xử lý bất đồng bộ hiện đại với Promise và Async/Await.</description>
+    </item>
+    <item>
+      <title>Bài 8: DOM Manipulation trong JavaScript</title>
+      <link>https://nguyentruongsontay.github.io/posts/js-03-dom/</link>
+      <pubDate>Mon, 23 Dec 2024 14:00:00 +0700</pubDate>
+      <guid>https://nguyentruongsontay.github.io/posts/js-03-dom/</guid>
+      <description>Tương tác với các phần tử HTML thông qua DOM.</description>
+    </item>
+    <item>
+      <title>Bài 7: Các tính năng mới trong ES6</title>
+      <link>https://nguyentruongsontay.github.io/posts/js-02-es6/</link>
+      <pubDate>Mon, 23 Dec 2024 11:00:00 +0700</pubDate>
+      <guid>https://nguyentruongsontay.github.io/posts/js-02-es6/</guid>
+      <description>Arrow function, Template literal và Destructuring.</description>
+    </item>
+    <item>
+      <title>Bài 6: Giới thiệu về JavaScript</title>
+      <link>https://nguyentruongsontay.github.io/posts/js-01-intro/</link>
+      <pubDate>Mon, 23 Dec 2024 09:00:00 +0700</pubDate>
+      <guid>https://nguyentruongsontay.github.io/posts/js-01-intro/</guid>
+      <description>Bắt đầu với ngôn ngữ lập trình web phổ biến nhất.</description>
+    </item>
+    <item>
+      <title>Bài 5: Xử lý ngoại lệ (Exception Handling) trong Java</title>
+      <link>https://nguyentruongsontay.github.io/posts/java-05-exception/</link>
+      <pubDate>Sun, 22 Dec 2024 16:00:00 +0700</pubDate>
+      <guid>https://nguyentruongsontay.github.io/posts/java-05-exception/</guid>
+      <description>Cách sử dụng try-catch-finally để xử lý lỗi.</description>
+    </item>
+    <item>
+      <title>Bài 4: Java Stream API</title>
+      <link>https://nguyentruongsontay.github.io/posts/java-04-stream/</link>
+      <pubDate>Sun, 22 Dec 2024 14:00:00 +0700</pubDate>
+      <guid>https://nguyentruongsontay.github.io/posts/java-04-stream/</guid>
+      <description>Xử lý dữ liệu hiệu quả với Stream API trong Java 8.</description>
+    </item>
+    <item>
+      <title>Bài 3: Sử dụng Java Collections Framework</title>
+      <link>https://nguyentruongsontay.github.io/posts/java-03-collections/</link>
+      <pubDate>Sun, 22 Dec 2024 08:00:00 +0700</pubDate>
+      <guid>https://nguyentruongsontay.github.io/posts/java-03-collections/</guid>
+      <description>Hướng dẫn sử dụng List, Set, Map trong Java.</description>
+    </item>
+    <item>
+      <title>Bài 2: Các khái niệm cơ bản của OOP trong Java</title>
+      <link>https://nguyentruongsontay.github.io/posts/java-02-oop/</link>
+      <pubDate>Sat, 21 Dec 2024 10:00:00 +0700</pubDate>
+      <guid>https://nguyentruongsontay.github.io/posts/java-02-oop/</guid>
+      <description>Tìm hiểu 4 tính chất của Lập trình hướng đối tượng trong Java.</description>
+    </item>
+    <item>
+      <title>Bài 1: Làm quen với Java</title>
+      <link>https://nguyentruongsontay.github.io/posts/java-01-intro/</link>
+      <pubDate>Fri, 20 Dec 2024 10:00:00 +0700</pubDate>
+      <guid>https://nguyentruongsontay.github.io/posts/java-01-intro/</guid>
+      <description>Giới thiệu về ngôn ngữ lập trình Java và cách cài đặt môi trường.</description>
+    </item>
+  </channel>
+</rss>

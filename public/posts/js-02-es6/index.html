@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="light">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Bài 7: Các tính năng mới trong ES6 | Nguyễn Trường Sơn Tây - Blog</title>
+<meta name="keywords" content="JavaScript, ES6">
+<meta name="description" content="Arrow function, Template literal và Destructuring.">
+<meta name="author" content="Nguyễn Trường Sơn Tây">
+<link rel="canonical" href="https://nguyentruongsontay.github.io/posts/js-02-es6/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://nguyentruongsontay.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://nguyentruongsontay.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://nguyentruongsontay.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://nguyentruongsontay.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://nguyentruongsontay.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://nguyentruongsontay.github.io/posts/js-02-es6/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    }
+
+</script><meta property="og:url" content="https://nguyentruongsontay.github.io/posts/js-02-es6/">
+  <meta property="og:site_name" content="Nguyễn Trường Sơn Tây - Blog">
+  <meta property="og:title" content="Bài 7: Các tính năng mới trong ES6">
+  <meta property="og:description" content="Arrow function, Template literal và Destructuring.">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-23T11:00:00+07:00">
+    <meta property="article:modified_time" content="2024-12-23T11:00:00+07:00">
+    <meta property="article:tag" content="JavaScript">
+    <meta property="article:tag" content="ES6">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bài 7: Các tính năng mới trong ES6">
+<meta name="twitter:description" content="Arrow function, Template literal và Destructuring.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://nguyentruongsontay.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Bài 7: Các tính năng mới trong ES6",
+      "item": "https://nguyentruongsontay.github.io/posts/js-02-es6/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Bài 7: Các tính năng mới trong ES6",
+  "name": "Bài 7: Các tính năng mới trong ES6",
+  "description": "Arrow function, Template literal và Destructuring.",
+  "keywords": [
+    "JavaScript", "ES6"
+  ],
+  "articleBody": "ES6 (ECMAScript 2015) mang lại nhiều cải tiến lớn cho JavaScript.\nArrow Function Cú pháp ngắn gọn hơn cho hàm.\nconst sum = (a, b) =\u003e a + b; Template Literals Sử dụng backticks ` để nội suy chuỗi.\nlet name = \"Sơn Tây\"; console.log(`Xin chào ${name}`); Destructuring Giải nén giá trị từ mảng hoặc đối tượng.\nconst user = { id: 1, name: \"Admin\" }; const { name } = user; ",
+  "wordCount" : "72",
+  "inLanguage": "en",
+  "datePublished": "2024-12-23T11:00:00+07:00",
+  "dateModified": "2024-12-23T11:00:00+07:00",
+  "author":{
+    "@type": "Person",
+    "name": "Nguyễn Trường Sơn Tây"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nguyentruongsontay.github.io/posts/js-02-es6/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nguyễn Trường Sơn Tây - Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nguyentruongsontay.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://nguyentruongsontay.github.io/" accesskey="h" title="Nguyễn Trường Sơn Tây - Blog (Alt + H)">Nguyễn Trường Sơn Tây - Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://nguyentruongsontay.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nguyentruongsontay.github.io/posts" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nguyentruongsontay.github.io/about" title="Profile">
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Bài 7: Các tính năng mới trong ES6
+    </h1>
+    <div class="post-description">
+      Arrow function, Template literal và Destructuring.
+    </div>
+    <div class="post-meta"><span title='2024-12-23 11:00:00 +0700 +07'>December 23, 2024</span>&nbsp;·&nbsp;<span>Nguyễn Trường Sơn Tây</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>ES6 (ECMAScript 2015) mang lại nhiều cải tiến lớn cho JavaScript.</p>
+<h2 id="arrow-function">Arrow Function<a hidden class="anchor" aria-hidden="true" href="#arrow-function">#</a></h2>
+<p>Cú pháp ngắn gọn hơn cho hàm.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
+</span></span></code></pre></div><h2 id="template-literals">Template Literals<a hidden class="anchor" aria-hidden="true" href="#template-literals">#</a></h2>
+<p>Sử dụng backticks <code>`</code> để nội suy chuỗi.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sơn Tây&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Xin chào </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span></code></pre></div><h2 id="destructuring">Destructuring<a hidden class="anchor" aria-hidden="true" href="#destructuring">#</a></h2>
+<p>Giải nén giá trị từ mảng hoặc đối tượng.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Admin&#34;</span> };
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">name</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">user</span>;
+</span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://nguyentruongsontay.github.io/tags/javascript/">JavaScript</a></li>
+      <li><a href="https://nguyentruongsontay.github.io/tags/es6/">ES6</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://nguyentruongsontay.github.io/">Nguyễn Trường Sơn Tây - Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

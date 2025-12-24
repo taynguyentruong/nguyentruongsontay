@@ -1,0 +1,43 @@
+baseURL = 'https://taynguyentruong.github.io/nguyentruongsontay/'
+languageCode = 'vi'
+title = 'Nguyễn Trường Sơn Tây - Blog'
+theme = 'PaperMod'
+
+[params]
+  defaultTheme = "light"
+  env = "production"
+  description = "Blog chia sẻ về Lập trình mạng, Java và JavaScript"
+  author = "Nguyễn Trường Sơn Tây"
+  # ShowReadingTime = true
+  # ShowShareButtons = true
+  
+  [params.profileMode]
+    enabled = false
+    title = "Nguyễn Trường Sơn Tây"
+    subtitle = "Sinh viên Lập trình Mạng"
+    # imageUrl = "<link to your image>"
+    
+  [params.homeInfoParams]
+    Title = "Xin chào 👋"
+    Content = "Chào mừng bạn đến với blog cá nhân của tôi. Nơi chia sẻ kiến thức về lập trình Java, JavaScript và Lập trình mạng."
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/taynguyentruong"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts"
+    weight = 20
+  [[menu.main]]
+    identifier = "about"
+    name = "Profile"
+    url = "/about"
+    weight = 30
