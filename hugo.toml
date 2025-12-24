@@ -20,8 +20,8 @@ defaultContentLanguage = 'vi'
     bio = "Chào mừng bạn đến với blog của tôi. Tôi đam mê Java, JavaScript và Network Programming."
     links = [
       { icon = "github", url = "https://github.com/taynguyentruong" },
-      { icon = "linkedin", url = "#" },
-      { icon = "email", url = "mailto:email@example.com" }
+      { icon = "facebook", url = "https://www.facebook.com/nguyen.truong.son.tay" },
+      { icon = "email", url = "mailto:taynguyen12032003@gmail.com" }
     ]
 
   [params.footer]

@@ -8,8 +8,8 @@ Nếu bạn có câu hỏi, đề xuất hợp tác hoặc chỉ muốn trò chu
 
 ### Thông tin liên hệ
 
-- **Email**: [taynguyen@student.edu.vn](mailto:taynguyen@student.edu.vn)
-- **Số điện thoại**: 0123 456 789
+- **Email**: [taynguyen12032003@gmail.com](mailto:taynguyen12032003@gmail.com)
+- **Số điện thoại**: 0972 289 840
 - **Địa chỉ**: TP. Hồ Chí Minh, Việt Nam
 
 ### Kết nối mạng xã hội
@@ -17,8 +17,7 @@ Nếu bạn có câu hỏi, đề xuất hợp tác hoặc chỉ muốn trò chu
 Bạn cũng có thể tìm thấy tôi trên các nền tảng sau:
 
 - [GitHub](https://github.com/taynguyentruong)
-- [LinkedIn](#)
-- [Facebook](#)
+- [Facebook](https://www.facebook.com/nguyen.truong.son.tay)
 
 ---
 *Rất mong nhận được tin nhắn từ bạn!*
