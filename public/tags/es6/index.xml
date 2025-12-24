@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ES6 on Nguyễn Trường Sơn Tây - Blog</title>
-    <link>https://nguyentruongsontay.github.io/tags/es6/</link>
+    <link>http://localhost:1313/nguyentruongsontay/tags/es6/</link>
     <description>Recent content in ES6 on Nguyễn Trường Sơn Tây - Blog</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>vi</language>
     <lastBuildDate>Mon, 23 Dec 2024 11:00:00 +0700</lastBuildDate>
-    <atom:link href="https://nguyentruongsontay.github.io/tags/es6/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/nguyentruongsontay/tags/es6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bài 7: Các tính năng mới trong ES6</title>
-      <link>https://nguyentruongsontay.github.io/posts/js-02-es6/</link>
+      <link>http://localhost:1313/nguyentruongsontay/posts/js-02-es6/</link>
       <pubDate>Mon, 23 Dec 2024 11:00:00 +0700</pubDate>
-      <guid>https://nguyentruongsontay.github.io/posts/js-02-es6/</guid>
+      <guid>http://localhost:1313/nguyentruongsontay/posts/js-02-es6/</guid>
       <description>Arrow function, Template literal và Destructuring.</description>
     </item>
   </channel>

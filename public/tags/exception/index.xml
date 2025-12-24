@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Exception on Nguyễn Trường Sơn Tây - Blog</title>
-    <link>https://nguyentruongsontay.github.io/tags/exception/</link>
+    <link>http://localhost:1313/nguyentruongsontay/tags/exception/</link>
     <description>Recent content in Exception on Nguyễn Trường Sơn Tây - Blog</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>vi</language>
     <lastBuildDate>Sun, 22 Dec 2024 16:00:00 +0700</lastBuildDate>
-    <atom:link href="https://nguyentruongsontay.github.io/tags/exception/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/nguyentruongsontay/tags/exception/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bài 5: Xử lý ngoại lệ (Exception Handling) trong Java</title>
-      <link>https://nguyentruongsontay.github.io/posts/java-05-exception/</link>
+      <link>http://localhost:1313/nguyentruongsontay/posts/java-05-exception/</link>
       <pubDate>Sun, 22 Dec 2024 16:00:00 +0700</pubDate>
-      <guid>https://nguyentruongsontay.github.io/posts/java-05-exception/</guid>
+      <guid>http://localhost:1313/nguyentruongsontay/posts/java-05-exception/</guid>
       <description>Cách sử dụng try-catch-finally để xử lý lỗi.</description>
     </item>
   </channel>
