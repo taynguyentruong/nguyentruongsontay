@@ -18,6 +18,7 @@ enableRobotsTXT = true
 
 [params]
   author = "Nguyễn Trường Sơn Tây"
+  image = "img/avatar.png"
   description = "Chào mừng bạn đến với blog của tôi. Tôi đam mê Java, JavaScript và Network Programming."
   defaultTheme = "light"
   

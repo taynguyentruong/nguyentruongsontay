@@ -12,6 +12,10 @@
   {{ end }}
 
   <aside class="bio">
+    {{ with .Site.Params.image }}
+    <img src="{{ . | relURL }}" alt="Avatar"
+      style="border-radius: 50%; display: block; margin: 0 auto 1rem auto; width: 150px; height: 150px; object-fit: cover;" />
+    {{ end }}
     <p class="sidebar__heading">{{ .Site.Params.author | default "Author" }}</p>
     <p>{{ .Site.Params.description }}</p>
   </aside>
