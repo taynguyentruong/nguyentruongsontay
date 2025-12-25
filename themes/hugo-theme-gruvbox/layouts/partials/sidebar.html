@@ -1,0 +1,24 @@
+<div class="sidebar">
+  {{ if .Params.toc }}
+  {{ with .TableOfContents }}
+  <aside class="toc">
+    <nav>
+      <p class="sidebar__heading">Table Of Contents</p>
+      {{ . }}
+    </nav>
+  </aside>
+  <hr />
+  {{ end }}
+  {{ end }}
+
+  <aside class="bio">
+    <p class="sidebar__heading">{{ .Site.Params.author | default "Author" }}</p>
+    <p>{{ .Site.Params.description }}</p>
+  </aside>
+
+  {{ if $.Site.Params.tagCloud.enable }}
+  <aside>
+    {{ partial "tag-cloud.html" . }}
+  </aside>
+  {{ end }}
+</div>

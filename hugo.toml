@@ -1,33 +1,33 @@
 baseURL = 'https://taynguyentruong.github.io/nguyentruongsontay/'
 title = 'Nguyễn Trường Sơn Tây'
-languageCode = 'vi'
-theme = 'congo'
+theme = 'hugo-theme-gruvbox'
 defaultContentLanguage = 'vi'
+languageCode = 'vi'
 
-[metadata]
-  # Enables minimal mode
-  # minimal = true
-  
+enableRobotsTXT = true
+
+[build]
+  noJSConfigInAssets = true
+  [build.buildStats]
+    enable = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params]
-  colorScheme = "congo" # options: "congo", "avocado", "ocean", "slate", ...
+  author = "Nguyễn Trường Sơn Tây"
+  description = "Chào mừng bạn đến với blog của tôi. Tôi đam mê Java, JavaScript và Network Programming."
   defaultTheme = "light"
   
-  [params.profile]
-    show = true
-    name = "Nguyễn Trường Sơn Tây"
-    image = "img/avatar.png"
-    headline = "Sinh viên Lập trình Mạng"
-    bio = "Chào mừng bạn đến với blog của tôi. Tôi đam mê Java, JavaScript và Network Programming."
-    links = [
-      { icon = "github", url = "https://github.com/taynguyentruong" },
-      { icon = "facebook", url = "https://www.facebook.com/nguyen.truong.son.tay" },
-      { icon = "email", url = "mailto:taynguyen12032003@gmail.com" }
-    ]
+  [params.logo]
+    text = "Nguyễn Trường Sơn Tây"
+    url = "/"
 
-  [params.footer]
-    showCopyright = true
-    showTheme = false
-    showPoweredBy = false
+  [params.prism]
+    languages = ["markup", "css", "clike", "javascript", "bash", "java"]
+    plugins = ["normalize-whitespace", "toolbar", "copy-to-clipboard", "line-numbers"]
 
 [languages]
   [languages.vi]
