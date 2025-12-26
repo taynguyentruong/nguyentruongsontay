@@ -1,6 +1,6 @@
 {{ define "footerfiles" }}
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
-<script src="{{ " js/search.js" | absURL }}"></script>
+<script src="{{ "js/search.js" | absURL }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script>
 {{ end }}
@@ -20,7 +20,7 @@
     </noscript>
 
     <div class="mb-5">
-      <form action="{{ " search/" | absURL }}">
+      <form action="{{ "search/" | absURL }}">
         <div class="input-group">
           <input id="search-query" name="s" class="form-control form-control-lg" type="search"
             placeholder="Nhập từ khóa tìm kiếm..." autocomplete="off" aria-label="Search" />
