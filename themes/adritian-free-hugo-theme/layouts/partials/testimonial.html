@@ -45,17 +45,16 @@ TESTIMONIALS COLLECTION
 
     <!-- Comment Section -->
     <div class="row pt-5 rad-fade-down">
-      <div class="col-12 text-center">
-        <h3>Bạn muốn để lại nhận xét?</h3>
-        <p>Hãy gửi ý kiến của bạn qua Email hoặc để lại bình luận bên dưới.</p>
-        <a href="mailto:taynguyentruong@gmail.com?subject=Nhận%20xét%20về%20Blog" class="btn btn-primary btn-lg mb-4">
-          <i class="icon-mail"></i> Gửi nhận xét qua Gmail
-        </a>
+      <div class="col-12">
+        <div class="comment-header text-center mb-4">
+          <h3>Để lại cảm nghĩ của bạn</h3>
+          <p>Bạn có thể bình luận bằng cách đăng nhập Gmail, Facebook hoặc đăng với tư cách khách.</p>
+        </div>
 
         <div id="disqus_thread"></div>
         <script>
           var disqus_config = function () {
-            this.page.url = window.location.href;
+            this.page.url = "{{ .Permalink | absURL }}";
             this.page.identifier = "home-testimonials";
           };
           (function () {
