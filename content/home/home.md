@@ -33,6 +33,11 @@ draft = false
     h_align="left"
  >}}
 
+{{< experience-list
+    sectionId="experience"
+    title="Kinh nghiệm làm việc"
+    padding="false" >}}
+
 
 {{< client-and-work-section
     title="Dự án nổi bật" >}}
