@@ -9,4 +9,5 @@ type = "blog"
   type = "blog"
 +++
 
-Chia sẻ kiến thức về lập trình Java, JavaScript và Network Programming.
+chia sẻ bài viết theo các khoá học đã được
+học về Java & Java Script.
