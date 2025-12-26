@@ -51,10 +51,16 @@ TESTIMONIALS COLLECTION
           <p>Bạn có thể bình luận bằng cách đăng nhập Gmail, Facebook hoặc đăng với tư cách khách.</p>
         </div>
 
+        {{ $currentPermalink := "" }}
+        {{ if $isShortcode }}
+        {{ $currentPermalink = .Page.Permalink }}
+        {{ else }}
+        {{ $currentPermalink = .Permalink }}
+        {{ end }}
         <div id="disqus_thread"></div>
         <script>
           var disqus_config = function () {
-            this.page.url = "{{ .Permalink | absURL }}";
+            this.page.url = "{{ $currentPermalink | absURL }}";
             this.page.identifier = "home-testimonials";
           };
           (function () {
