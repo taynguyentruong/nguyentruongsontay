@@ -1,0 +1,11 @@
+<div class="search-bar-container mb-4">
+    <form action="{{ " search/" | relLangURL }}" method="GET">
+        <div class="input-group">
+            <input name="s" class="form-control form-control-lg" type="search"
+                placeholder='{{ i18n "search_placeholder" | default "Tìm kiếm bài viết..." }}' aria-label="Search" />
+            <button class="btn btn-primary" type="submit">
+                <i class="icon-search"></i> Tìm kiếm
+            </button>
+        </div>
+    </form>
+</div>

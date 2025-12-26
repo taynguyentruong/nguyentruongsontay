@@ -1,37 +1,39 @@
 {{ define "footerfiles" }}
-<script src="{{ "js/fuse.min.js" | absURL }}"></script>
-<script src="{{ "js/search.js" | absURL }}"></script>
-<script src="{{ "js/purify.min.js" | absURL }}"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+<script src="{{ " js/search.js" | absURL }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script>
 {{ end }}
 
 {{ define "main" }}
-<section id="main-content" class="search-section p-3 p-lg-5 d-flex flex-column align-items-center bg-light rounded shadow-sm">
+<section id="main-content"
+  class="search-section p-3 p-lg-5 d-flex flex-column align-items-center bg-light rounded shadow-sm">
   <div class="my-auto w-100" style="max-width: 760px;">
-    <h2 class="mb-4 text-center">Search the Site</h2>
-    
+    <h2 class="mb-4 text-center">Tìm kiếm trên trang web</h2>
+
     <noscript>
       <div class="alert alert-warning" role="alert">
-        JavaScript is required to use the search functionality, because the search takes place client-side in the web browser. 
-        <br/>
-        Please enable JavaScript in your browser to use this functionality.
+        JavaScript là bắt buộc để sử dụng chức năng tìm kiếm.
+        <br />
+        Vui lòng bật JavaScript trong trình duyệt của bạn.
       </div>
     </noscript>
-    
+
     <div class="mb-5">
-      <form action="{{ "search" | absURL }}">
+      <form action="{{ " search/" | absURL }}">
         <div class="input-group">
-          <input id="search-query" name="s" class="form-control form-control-lg" type="search" placeholder="Type to search..." autocomplete="off" aria-label="Search" />
+          <input id="search-query" name="s" class="form-control form-control-lg" type="search"
+            placeholder="Nhập từ khóa tìm kiếm..." autocomplete="off" aria-label="Search" />
           <button type="submit" class="input-group-text">
             <i class="icon-circle-arrow-right"></i>
           </button>
         </div>
       </form>
     </div>
-    
+
     <div id="search-results" class="card border-0">
       <div class="card-body">
-        <h3 class="card-title">Matching pages</h3>
+        <h3 class="card-title">Kết quả phù hợp</h3>
         <!-- Results will appear here -->
       </div>
     </div>
@@ -46,59 +48,59 @@
 </script>
 
 <script>
-// Translated labels from Hugo i18n
-const SEARCH_LABELS = {
-  tags: "{{ i18n "search_tags_label" }}",
-  categories: "{{ i18n "search_categories_label" }}",
-  filterByTag: "{{ i18n "search_filter_by_tag" }}",
-  filterByCategory: "{{ i18n "search_filter_by_category" }}"
-};
-
-// Generate clickable tag/category badges
-function createTagBadge(tag, type) {
-  const badge = document.createElement('a');
-  badge.href = `${window.location.pathname}?s=${encodeURIComponent(tag)}`;
-  badge.className = 'badge bg-primary text-decoration-none me-1';
-  badge.textContent = tag;
-  badge.setAttribute('aria-label', `${type === 'tag' ? SEARCH_LABELS.filterByTag : SEARCH_LABELS.filterByCategory}: ${tag}`);
-  badge.onclick = function(e) {
-    e.preventDefault();
-    document.getElementById('search-query').value = tag;
-    document.getElementById('search-query').dispatchEvent(new Event('input'));
+  // Translated labels from Hugo i18n
+  const SEARCH_LABELS = {
+    tags: "Thẻ",
+    categories: "Danh mục",
+    filterByTag: "Lọc theo thẻ",
+    filterByCategory: "Lọc theo danh mục"
   };
-  return badge;
-}
 
-// Helper function to add a taxonomy section (tags or categories) to search results
-function addTaxonomySection(element, dataString, labelText, type) {
-  if (!dataString) return;
-  
-  const itemArray = dataString.split(',').map(item => item.trim()).filter(Boolean);
-  if (itemArray.length === 0) return;
-  
-  const containerDiv = document.createElement('div');
-  containerDiv.className = 'mb-1';
-  
-  const label = document.createElement('span');
-  label.className = 'text-muted small';
-  label.textContent = labelText + ': ';
-  containerDiv.appendChild(label);
-  
-  itemArray.forEach(item => {
-    containerDiv.appendChild(createTagBadge(item, type));
-  });
-  
-  const paragraphElement = element.querySelector('p');
-  if (paragraphElement) {
-    paragraphElement.after(containerDiv);
-  } else {
-    element.appendChild(containerDiv);
+  // Generate clickable tag/category badges
+  function createTagBadge(tag, type) {
+    const badge = document.createElement('a');
+    badge.href = `${window.location.pathname}?s=${encodeURIComponent(tag)}`;
+    badge.className = 'badge bg-primary text-decoration-none me-1';
+    badge.textContent = tag;
+    badge.setAttribute('aria-label', `${type === 'tag' ? SEARCH_LABELS.filterByTag : SEARCH_LABELS.filterByCategory}: ${tag}`);
+    badge.onclick = function (e) {
+      e.preventDefault();
+      document.getElementById('search-query').value = tag;
+      document.getElementById('search-query').dispatchEvent(new Event('input'));
+    };
+    return badge;
   }
-}
 
-function addTagsToResult(element) {
-  addTaxonomySection(element, element.dataset.tags, SEARCH_LABELS.tags, 'tag');
-  addTaxonomySection(element, element.dataset.categories, SEARCH_LABELS.categories, 'category');
-}
+  // Helper function to add a taxonomy section (tags or categories) to search results
+  function addTaxonomySection(element, dataString, labelText, type) {
+    if (!dataString) return;
+
+    const itemArray = dataString.split(',').map(item => item.trim()).filter(Boolean);
+    if (itemArray.length === 0) return;
+
+    const containerDiv = document.createElement('div');
+    containerDiv.className = 'mb-1';
+
+    const label = document.createElement('span');
+    label.className = 'text-muted small';
+    label.textContent = labelText + ': ';
+    containerDiv.appendChild(label);
+
+    itemArray.forEach(item => {
+      containerDiv.appendChild(createTagBadge(item, type));
+    });
+
+    const paragraphElement = element.querySelector('p');
+    if (paragraphElement) {
+      paragraphElement.after(containerDiv);
+    } else {
+      element.appendChild(containerDiv);
+    }
+  }
+
+  function addTagsToResult(element) {
+    addTaxonomySection(element, element.dataset.tags, SEARCH_LABELS.tags, 'tag');
+    addTaxonomySection(element, element.dataset.categories, SEARCH_LABELS.categories, 'category');
+  }
 </script>
 {{ end }}

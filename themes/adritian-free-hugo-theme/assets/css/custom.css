@@ -1,1 +1,21 @@
-/* You can customize theme styles here */
+/* Search Bar Styles */
+.search-bar-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-bar-container .input-group {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.search-bar-container .form-control {
+    border: none;
+    padding-left: 25px;
+}
+
+.search-bar-container .btn {
+    padding-right: 25px;
+    padding-left: 20px;
+}
