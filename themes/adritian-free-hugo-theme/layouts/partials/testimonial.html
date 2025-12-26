@@ -58,11 +58,7 @@ TESTIMONIALS COLLECTION
         <div id="disqus_thread"></div>
         <script>
           var disqus_config = function () {
-            { { if .Page } }
-            this.page.url = "{{ .Page.Site.BaseURL }}";
-            { { else } }
-            this.page.url = "{{ .Site.BaseURL }}";
-            { { end } }
+            this.page.url = "{{ site.BaseURL }}";
             this.page.identifier = "home-testimonials";
           };
           (function () {
