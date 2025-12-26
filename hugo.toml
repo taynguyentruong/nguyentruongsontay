@@ -11,6 +11,9 @@ languageCode = 'vi'
   # Adritian settings
   homepageExperienceCount = 6
   
+  [params.experience]
+    showJobCard = true
+
   [params.blog]
     layout = "sidebar-right"
     sidebarWidth = "25"
@@ -20,6 +23,38 @@ languageCode = 'vi'
     recentPostCount = 5
     listStyle = "summary"
     listLayout = "default"
+
+  # Plugins
+  [params.plugins]
+    # CSS Plugins
+    [[params.plugins.css]]
+      URL = "css/custom.css"
+    [[params.plugins.css]]
+      URL = "css/adritian-icons.css"
+    ## Print css
+    [[params.plugins.css]]
+      URL = "css/bootstrap-print.css"
+    
+    # JS Plugins
+    [[params.plugins.js]]
+      URL = "js/rad-animations.js"
+    [[params.plugins.js]]
+      URL = "js/sticky-header.js"
+    [[params.plugins.js]]
+      URL = "js/library/fontfaceobserver.js"
+    
+    # SCSS Plugins
+    [[params.plugins.scss]]
+      URL = "scss/adritian.scss"
+
+  [params.colorTheme]
+    [params.colorTheme.selector.disable]
+      footer = false
+      header = false
+      mobileHeader = false
+
+  [params.pageTransition]
+    enabled = true
 
 [languages]
   [languages.vi]
@@ -37,13 +72,21 @@ languageCode = 'vi'
         URL = "/#about"
         weight = 2
       [[languages.vi.menus.header]]
+        name = "Kinh nghiệm"
+        URL = "/#experience"
+        weight = 3
+      [[languages.vi.menus.header]]
+        name = "Dự án"
+        URL = "/#client-and-work-section"
+        weight = 4
+      [[languages.vi.menus.header]]
         name = "Blog"
         URL = "/posts/"
-        weight = 3
+        weight = 5
       [[languages.vi.menus.header]]
         name = "Liên hệ"
         URL = "/contact/"
-        weight = 4
+        weight = 6
 
 [markup]
   [markup.goldmark]
