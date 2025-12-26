@@ -7,7 +7,7 @@ draft = false
 {{< showcase-section
     title="Nguyễn Trường Sơn Tây"
     subtitle="Java | JavaScript | Network Programming"
-    description="Chào mừng bạn đến với blog của tôi. Tôi đam mê tìm hiểu và chia sẻ kiến thức về lập trình."
+    description="Xin chào! Tôi là Nguyễn Trường Sơn Tây, sinh viên năm 4 ngành Công nghệ Thông tin tại Trường Đại học Công nghệ TP.HCM (HUTECH). Tôi yêu thích công nghệ, lập trình và việc xây dựng các hệ thống phần mềm phục vụ cho học tập cũng như các bài toán thực tiễn. Blog này được tạo ra như một không gian để tôi chia sẻ kiến thức, kinh nghiệm học tập, quá trình làm đồ án và những góc nhìn cá nhân trong hành trình theo đuổi ngành Công nghệ Thông tin. Nếu bạn có câu hỏi, góp ý hoặc muốn trao đổi thêm, đừng ngần ngại liên hệ hoặc để lại bình luận trực tiếp dưới các bài viết. Rất vui được kết nối và học hỏi từ mọi người!"
     buttonText="Đọc Blog"
     buttonUrl="/posts/"
     imgSrc="img/avatar.png"
