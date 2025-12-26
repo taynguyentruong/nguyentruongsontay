@@ -3,6 +3,10 @@ title = 'Nguyễn Trường Sơn Tây'
 theme = 'adritian-free-hugo-theme'
 languageCode = 'vi'
 
+[outputs]
+  home = ["HTML", "JSON", "RSS"]
+
+
 [params]
   author = "Nguyễn Trường Sơn Tây"
   description = "Xin chào! Tôi là Nguyễn Trường Sơn Tây, sinh viên Công nghệ Thông tin tại HUTECH. Blog chia sẻ kiến thức về lập trình Java, JavaScript và Network Programming."
@@ -72,25 +76,21 @@ languageCode = 'vi'
         URL = "/#about"
         weight = 2
       [[languages.vi.menus.header]]
-        name = "Tìm kiếm"
-        URL = "/search/"
-        weight = 3
-      [[languages.vi.menus.header]]
         name = "Kinh nghiệm"
         URL = "/#experience"
-        weight = 4
+        weight = 3
       [[languages.vi.menus.header]]
         name = "Dự án"
         URL = "/#client-and-work-section"
-        weight = 5
+        weight = 4
       [[languages.vi.menus.header]]
         name = "Blog"
         URL = "/posts/"
-        weight = 6
+        weight = 5
       [[languages.vi.menus.header]]
         name = "Liên hệ"
         URL = "/contact/"
-        weight = 7
+        weight = 6
 
 [markup]
   [markup.goldmark]

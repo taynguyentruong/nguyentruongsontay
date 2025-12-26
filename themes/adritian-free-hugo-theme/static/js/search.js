@@ -170,7 +170,7 @@ function executeSearch(searchQuery) {
     searchResults.innerHTML =
       '<div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>';
 
-    fetch("/index.json")
+    fetch(window.indexURL || "/index.json")
       .then((response) => {
         if (!response.ok) {
           throw new Error(
