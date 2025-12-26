@@ -2,54 +2,83 @@
 {{- $isShortcode := (eq $contextType "*hugolib.ShortcodeWithPage") -}}
 
 {{/* ---------------------------------------------------------------------------
-     SECTION TITLE
-     --------------------------------------------------------------------------- */}}
+SECTION TITLE
+--------------------------------------------------------------------------- */}}
 {{- $title := "" -}}
 {{- if $isShortcode }}
-  {{- $title = .Get "title" -}}
+{{- $title = .Get "title" -}}
 {{ else }}
-  {{- $title = i18n "testimonials_title" -}}
+{{- $title = i18n "testimonials_title" -}}
 {{ end }}
 
 {{/* ---------------------------------------------------------------------------
-     TESTIMONIALS COLLECTION
-     --------------------------------------------------------------------------- */}}
+TESTIMONIALS COLLECTION
+--------------------------------------------------------------------------- */}}
 {{- $testimonials := (where .Site.RegularPages.ByDate "Type" "testimonial") -}}
 {{- if not $isShortcode }}
-  {{- $baseLangSite := .Sites.Default -}}
-  {{- $testimonials = $testimonials | lang.Merge (where $baseLangSite.RegularPages.ByDate "Type" "testimonial") -}}
+{{- $baseLangSite := .Sites.Default -}}
+{{- $testimonials = $testimonials | lang.Merge (where $baseLangSite.RegularPages.ByDate "Type" "testimonial") -}}
 {{- end -}}
 
 {{/*
-  sectionId: Optional argument to override the default HTML id for this section. If not provided, the default id is used. */}}
+sectionId: Optional argument to override the default HTML id for this section. If not provided, the default id is used.
+*/}}
 {{ $sectionId := "testimonial" }}
 {{ with .Get "sectionId" }}
-  {{ $sectionId = . }}
+{{ $sectionId = . }}
 {{ end }}
 
-<section {{if $sectionId}} id="{{ $sectionId }}"{{end}} class="section rad-animation-group section--border-bottom">
-    <div class="container">
-    {{/* 
-    When passed from a shortcode, the context type is *hugolib.ShortcodeWithPage. 
-    When passed from a partial included in a page via params, the context type is *hugolib.pageState. 
+<section {{if $sectionId}} id="{{ $sectionId }}" {{end}} class="section rad-animation-group section--border-bottom">
+  <div class="container">
+    {{/*
+    When passed from a shortcode, the context type is *hugolib.ShortcodeWithPage.
+    When passed from a partial included in a page via params, the context type is *hugolib.pageState.
     */}}
     <h2 class="rad-fade-down">{{ $title }}</h2>
-        <div class="row row--padded mb-0 rad-fade-down">
-            {{ range $testimonials }}
-            <div class="col-12 col-md-4 mb-5 mb-md-0 testimonial container">
-                <i class="icon-quote-left"></i>
-                {{ .Content }}
-                <div class="testimonial__author row gx-0">
+    <div class="row row--padded mb-0 rad-fade-down">
+      {{ range $testimonials }}
+      <div class="col-12 col-md-4 mb-5 mb-md-0 testimonial container">
+        <i class="icon-quote-left"></i>
+        {{ .Content }}
+        <div class="testimonial__author row gx-0">
 
-                    {{ partial "lazypicture" (dict "src" .Params.image.src "scale" .Params.image.scale "pictureclass" "picture testimonial col-2" "alt" $title)}}
-                    
-                         <div class="testimonial__author-info col-10">
-                        <h3>{{ .Params.name }}</h3>
-                        <span>{{ .Params.position }}</span>
-                    </div>
-                </div>
-            </div>
-            {{ end }}
+          {{ partial "lazypicture" (dict "src" .Params.image.src "scale" .Params.image.scale "pictureclass" "picture
+          testimonial col-2" "alt" $title)}}
+
+          <div class="testimonial__author-info col-10">
+            <h3>{{ .Params.name }}</h3>
+            <span>{{ .Params.position }}</span>
+          </div>
         </div>
+      </div>
+      {{ end }}
     </div>
+
+    <!-- Comment Section -->
+    <div class="row pt-5 rad-fade-down">
+      <div class="col-12 text-center">
+        <h3>Bạn muốn để lại nhận xét?</h3>
+        <p>Hãy gửi ý kiến của bạn qua Email hoặc để lại bình luận bên dưới.</p>
+        <a href="mailto:taynguyentruong@gmail.com?subject=Nhận%20xét%20về%20Blog" class="btn btn-primary btn-lg mb-4">
+          <i class="icon-mail"></i> Gửi nhận xét qua Gmail
+        </a>
+
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+            this.page.url = "{{ .Site.BaseURL }}";
+            this.page.identifier = "home-testimonials";
+          };
+          (function () {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://nguyentruongsontay.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+      </div>
+    </div>
+  </div>
 </section>
