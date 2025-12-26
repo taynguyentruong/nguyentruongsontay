@@ -23,7 +23,7 @@ draft = false
 
 {{< about-section
     title="Về tôi"
-    content="Tôi là một lập trình viên đam mê công nghệ. Blog này là nơi tôi chia sẻ những kiến thức tôi học được về Java, JavaScript và nhiều thứ khác.<br><br><strong>Chứng chỉ:</strong><div class='row mt-3'><div class='col-12 col-md-4 mb-3'><img src='img/certificates/cert-js1.png' class='img-fluid rounded shadow' alt='JavaScript Essentials 1'></div><div class='col-12 col-md-4 mb-3'><img src='img/certificates/cert-js2.png' class='img-fluid rounded shadow' alt='JavaScript Essentials 2'></div><div class='col-12 col-md-4 mb-3'><img src='img/certificates/cert-network.png' class='img-fluid rounded shadow' alt='Networking Basics'></div></div>"
+    content="Tôi là một sinh viên và một lập trình viên đam mê công nghệ. Blog này là nơi tôi chia sẻ những kiến thức tôi học được về Java, JavaScript và nhiều thứ khác.<br><br><strong>Chứng chỉ:</strong><div class='row mt-3'><div class='col-12 col-md-4 mb-3'><img src='img/certificates/cert-js1.png' class='img-fluid rounded shadow' alt='JavaScript Essentials 1'></div><div class='col-12 col-md-4 mb-3'><img src='img/certificates/cert-js2.png' class='img-fluid rounded shadow' alt='JavaScript Essentials 2'></div><div class='col-12 col-md-4 mb-3'><img src='img/certificates/cert-network.png' class='img-fluid rounded shadow' alt='Networking Basics'></div></div>"
     button_icon="icon-book"
     button_text="Xem bài viết"
     button_url="/posts/"
