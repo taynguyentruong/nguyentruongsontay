@@ -7,9 +7,9 @@ SECTION TITLE
 {{- $title := "" -}}
 {{- if $isShortcode }}
 {{- $title = .Get "title" -}}
-{{ else }}
+{{- else }}
 {{- $title = i18n "testimonials_title" -}}
-{{ end }}
+{{- end }}
 
 {{/* ---------------------------------------------------------------------------
 TESTIMONIALS COLLECTION
@@ -20,9 +20,6 @@ TESTIMONIALS COLLECTION
 {{- $testimonials = $testimonials | lang.Merge (where $baseLangSite.RegularPages.ByDate "Type" "testimonial") -}}
 {{- end -}}
 
-{{/*
-sectionId: Optional argument to override the default HTML id for this section. If not provided, the default id is used.
-*/}}
 {{ $sectionId := "testimonial" }}
 {{ with .Get "sectionId" }}
 {{ $sectionId = . }}
@@ -30,10 +27,6 @@ sectionId: Optional argument to override the default HTML id for this section. I
 
 <section {{if $sectionId}} id="{{ $sectionId }}" {{end}} class="section rad-animation-group section--border-bottom">
   <div class="container">
-    {{/*
-    When passed from a shortcode, the context type is *hugolib.ShortcodeWithPage.
-    When passed from a partial included in a page via params, the context type is *hugolib.pageState.
-    */}}
     <h2 class="rad-fade-down">{{ $title }}</h2>
     <div class="row row--padded mb-0 rad-fade-down">
       {{ range $testimonials }}
@@ -41,10 +34,9 @@ sectionId: Optional argument to override the default HTML id for this section. I
         <i class="icon-quote-left"></i>
         {{ .Content }}
         <div class="testimonial__author row gx-0">
-
-          {{ partial "lazypicture" (dict "src" .Params.image.src "scale" .Params.image.scale "pictureclass" "picture
-          testimonial col-2" "alt" $title)}}
-
+          {{ $picClass := "picture testimonial col-2" }}
+          {{ partial "lazypicture" (dict "src" .Params.image.src "scale" .Params.image.scale "pictureclass" $picClass
+          "alt" $title) }}
           <div class="testimonial__author-info col-10">
             <h3>{{ .Params.name }}</h3>
             <span>{{ .Params.position }}</span>
@@ -66,7 +58,11 @@ sectionId: Optional argument to override the default HTML id for this section. I
         <div id="disqus_thread"></div>
         <script>
           var disqus_config = function () {
+            { { if .Page } }
+            this.page.url = "{{ .Page.Site.BaseURL }}";
+            { { else } }
             this.page.url = "{{ .Site.BaseURL }}";
+            { { end } }
             this.page.identifier = "home-testimonials";
           };
           (function () {
