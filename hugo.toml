@@ -5,7 +5,7 @@ languageCode = 'vi'
 
 [params]
   author = "Nguyễn Trường Sơn Tây"
-  description = "Chào mừng bạn đến với blog của tôi. Tôi đam mê Java, JavaScript và Network Programming."
+  description = "Xin chào! Tôi là Nguyễn Trường Sơn Tây, sinh viên Công nghệ Thông tin tại HUTECH. Blog chia sẻ kiến thức về lập trình Java, JavaScript và Network Programming."
   images = ["img/avatar.png"]
   
   # Adritian settings
