@@ -37,11 +37,11 @@ draft = false
     title="Kinh nghiệm làm việc"
     intro_title="Hành trình của tôi"
     intro_description="Tôi luôn tìm kiếm cơ hội để học hỏi và phát triển kỹ năng của mình."
-    button1_url="/posts"
+    button1_url="/posts/"
     button1_text="Đọc bài viết"
     button1_icon="icon-edit-2"
     button2_text="Liên hệ"
-    button2_url="/contact"
+    button2_url="/contact/"
     hideViewAll="false"
 >}}
 
