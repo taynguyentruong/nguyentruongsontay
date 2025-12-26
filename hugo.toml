@@ -11,6 +11,7 @@ languageCode = 'vi'
   author = "Nguyễn Trường Sơn Tây"
   description = "Xin chào! Tôi là Nguyễn Trường Sơn Tây, sinh viên Công nghệ Thông tin tại HUTECH. Blog chia sẻ kiến thức về lập trình Java, JavaScript và Network Programming."
   images = ["img/avatar.png"]
+  logo = "img/logo.png"
   
   # Adritian settings
   homepageExperienceCount = 6
