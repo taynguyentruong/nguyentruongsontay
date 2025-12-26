@@ -1,54 +1,54 @@
 baseURL = 'https://taynguyentruong.github.io/nguyentruongsontay/'
 title = 'Nguyễn Trường Sơn Tây'
-theme = 'hugo-theme-gruvbox'
-defaultContentLanguage = 'vi'
+theme = 'adritian-free-hugo-theme'
 languageCode = 'vi'
-
-enableRobotsTXT = true
-
-[build]
-  noJSConfigInAssets = true
-  [build.buildStats]
-    enable = true
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
 
 [params]
   author = "Nguyễn Trường Sơn Tây"
-  image = "img/avatar.png"
   description = "Chào mừng bạn đến với blog của tôi. Tôi đam mê Java, JavaScript và Network Programming."
-  defaultTheme = "light"
+  images = ["img/avatar.png"]
   
-  [params.logo]
-    text = "Nguyễn Trường Sơn Tây"
-    url = "/"
-
-  [params.prism]
-    languages = ["markup", "css", "clike", "javascript", "bash", "java"]
-    plugins = ["normalize-whitespace", "toolbar", "copy-to-clipboard", "line-numbers"]
+  # Adritian settings
+  homepageExperienceCount = 6
+  
+  [params.blog]
+    layout = "sidebar-right"
+    sidebarWidth = "25"
+    narrowContent = true
+    showCategories = true
+    showRecentPosts = true
+    recentPostCount = 5
+    listStyle = "summary"
+    listLayout = "default"
 
 [languages]
   [languages.vi]
     languageName = "Tiếng Việt"
     contentDir = "content"
     weight = 1
+    
+    [languages.vi.menus]
+      [[languages.vi.menus.header]]
+        name = "Trang chủ"
+        URL = "/"
+        weight = 1
+      [[languages.vi.menus.header]]
+        name = "Về tôi"
+        URL = "/#about"
+        weight = 2
+      [[languages.vi.menus.header]]
+        name = "Blog"
+        URL = "/posts/"
+        weight = 3
+      [[languages.vi.menus.header]]
+        name = "Liên hệ"
+        URL = "/contact/"
+        weight = 4
 
-[menu]
-  [[menu.main]]
-    identifier = "blog"
-    name = "Blog"
-    url = "/posts/"
-    weight = 10
-  [[menu.main]]
-    identifier = "about"
-    name = "Về tôi"
-    url = "/about/"
-    weight = 20
-  [[menu.main]]
-    identifier = "contact"
-    name = "Liên hệ"
-    url = "/contact/"
-    weight = 30
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    lineNos = false
+    style = "github"
