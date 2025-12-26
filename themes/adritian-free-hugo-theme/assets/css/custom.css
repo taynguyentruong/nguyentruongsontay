@@ -19,3 +19,22 @@
     padding-right: 25px;
     padding-left: 20px;
 }
+
+/* Header Logo Styles */
+.navbar-brand .logo {
+    max-height: 45px;
+    width: auto;
+    margin-right: 12px;
+    border-radius: 50%;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover .logo {
+    transform: scale(1.1);
+}
+
+.navbar-brand span {
+    vertical-align: middle;
+    font-weight: 700;
+}
